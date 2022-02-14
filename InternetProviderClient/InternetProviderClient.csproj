@@ -1,0 +1,292 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.props" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{FE150F4E-97CB-4C02-8F16-11B3B6247DD3}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>InternetProviderClient</RootNamespace>
+    <AssemblyName>InternetProviderClient</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AdminUI\AdminEditingForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminUI\AdminEditingForm.Designer.cs">
+      <DependentUpon>AdminEditingForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminUI\AdministrationControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AdminUI\AdministrationControl.Designer.cs">
+      <DependentUpon>AdministrationControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminUI\AdminsControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AdminUI\AdminsControl.Designer.cs">
+      <DependentUpon>AdminsControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminUI\ClientsControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AdminUI\ClientsControl.Designer.cs">
+      <DependentUpon>ClientsControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminUI\ReportsControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AdminUI\ReportsControl.Designer.cs">
+      <DependentUpon>ReportsControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminUI\Reports\MonthlyRevenueForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminUI\Reports\MonthlyRevenueForm.Designer.cs">
+      <DependentUpon>MonthlyRevenueForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminUI\Reports\TariffsDiagramForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminUI\Reports\TariffsDiagramForm.Designer.cs">
+      <DependentUpon>TariffsDiagramForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminUI\TariffEditingForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminUI\TariffEditingForm.Designer.cs">
+      <DependentUpon>TariffEditingForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminUI\TariffsControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AdminUI\TariffsControl.Designer.cs">
+      <DependentUpon>TariffsControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminUI\TariffSelectionForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminUI\TariffSelectionForm.Designer.cs">
+      <DependentUpon>TariffSelectionForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClientUI\ClientSettingControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ClientUI\ClientSettingControl.Designer.cs">
+      <DependentUpon>ClientSettingControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClientUI\PersonDataControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ClientUI\PersonDataControl.Designer.cs">
+      <DependentUpon>PersonDataControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClientUI\ReportMonthsControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ClientUI\ReportMonthsControl.Designer.cs">
+      <DependentUpon>ReportMonthsControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Extensions.cs" />
+    <Compile Include="Forms\AuthorizationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AuthorizationForm.Designer.cs">
+      <DependentUpon>AuthorizationForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\MainAdminForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MainAdminForm.Designer.cs">
+      <DependentUpon>MainAdminForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\MainClientForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MainClientForm.Designer.cs">
+      <DependentUpon>MainClientForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Forms\RegistrationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\RegistrationForm.Designer.cs">
+      <DependentUpon>RegistrationForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClientUI\HelpControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ClientUI\HelpControl.Designer.cs">
+      <DependentUpon>HelpControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClientUI\PersonRoomControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ClientUI\PersonRoomControl.Designer.cs">
+      <DependentUpon>PersonRoomControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClientUI\TariffsControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ClientUI\TariffsControl.Designer.cs">
+      <DependentUpon>TariffsControl.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AdminUI\AdminEditingForm.resx">
+      <DependentUpon>AdminEditingForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminUI\AdministrationControl.resx">
+      <DependentUpon>AdministrationControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminUI\AdminsControl.resx">
+      <DependentUpon>AdminsControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminUI\ClientsControl.resx">
+      <DependentUpon>ClientsControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminUI\ReportsControl.resx">
+      <DependentUpon>ReportsControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminUI\Reports\MonthlyRevenueForm.resx">
+      <DependentUpon>MonthlyRevenueForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminUI\Reports\TariffsDiagramForm.resx">
+      <DependentUpon>TariffsDiagramForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminUI\TariffEditingForm.resx">
+      <DependentUpon>TariffEditingForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminUI\TariffsControl.resx">
+      <DependentUpon>TariffsControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminUI\TariffSelectionForm.resx">
+      <DependentUpon>TariffSelectionForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClientUI\ClientSettingControl.resx">
+      <DependentUpon>ClientSettingControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClientUI\PersonDataControl.resx">
+      <DependentUpon>PersonDataControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClientUI\ReportMonthsControl.resx">
+      <DependentUpon>ReportMonthsControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AuthorizationForm.resx">
+      <DependentUpon>AuthorizationForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MainAdminForm.resx">
+      <DependentUpon>MainAdminForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MainClientForm.resx">
+      <DependentUpon>MainClientForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Forms\RegistrationForm.resx">
+      <DependentUpon>RegistrationForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClientUI\HelpControl.resx">
+      <DependentUpon>HelpControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClientUI\PersonRoomControl.resx">
+      <DependentUpon>PersonRoomControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClientUI\TariffsControl.resx">
+      <DependentUpon>TariffsControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\DataSources\Model.Entites.Admin.datasource" />
+    <None Include="Properties\DataSources\Model.Entites.Client.datasource" />
+    <None Include="Properties\DataSources\Model.Entites.ReportMonth.datasource" />
+    <None Include="Properties\DataSources\Model.Entites.Tariff.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DataBase\Model.csproj">
+      <Project>{6BCCD9E0-7197-48E3-B8A2-BEE6CBEE2DE2}</Project>
+      <Name>Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Service\Service.csproj">
+      <Project>{20043b5f-64f2-4e37-9615-b02bc4178cdb}</Project>
+      <Name>Service</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resource\Icons\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>Данный проект ссылается на пакеты NuGet, отсутствующие на этом компьютере. Используйте восстановление пакетов NuGet, чтобы скачать их.  Дополнительную информацию см. по адресу: http://go.microsoft.com/fwlink/?LinkID=322105. Отсутствует следующий файл: {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.targets'))" />
+  </Target>
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.targets" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" />
+</Project>
