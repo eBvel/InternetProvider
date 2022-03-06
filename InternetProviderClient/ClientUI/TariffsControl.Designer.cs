@@ -51,7 +51,7 @@
             // 
             // descriptionPanel
             // 
-            this.descriptionPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(255)))), ((int)(((byte)(190)))));
+            this.descriptionPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(220)))), ((int)(((byte)(210)))));
             this.descriptionPanel.Controls.Add(this.tbFind);
             this.descriptionPanel.Controls.Add(this.btnConnectTariff);
             this.descriptionPanel.Controls.Add(this.btnFind);
@@ -97,7 +97,7 @@
             // 
             // label1
             // 
-            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(255)))), ((int)(((byte)(190)))));
+            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(220)))), ((int)(((byte)(210)))));
             this.label1.Dock = System.Windows.Forms.DockStyle.Top;
             this.label1.Location = new System.Drawing.Point(0, 0);
             this.label1.Name = "label1";
@@ -106,7 +106,7 @@
             // 
             // label2
             // 
-            this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(255)))), ((int)(((byte)(190)))));
+            this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(220)))), ((int)(((byte)(210)))));
             this.label2.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.label2.Location = new System.Drawing.Point(0, 686);
             this.label2.Name = "label2";
@@ -121,6 +121,7 @@
             this.table.AllowUserToResizeRows = false;
             this.table.AutoGenerateColumns = false;
             this.table.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
+            this.table.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(210)))), ((int)(((byte)(210)))));
             this.table.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.table.ColumnHeadersVisible = false;
             this.table.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -140,6 +141,7 @@
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.table.DefaultCellStyle = dataGridViewCellStyle2;
             this.table.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.table.GridColor = System.Drawing.SystemColors.Control;
             this.table.Location = new System.Drawing.Point(0, 24);
             this.table.Name = "table";
             this.table.ReadOnly = true;

@@ -40,13 +40,13 @@
             // 
             // tableLayoutPanel1
             // 
-            this.tableLayoutPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
-            this.tableLayoutPanel1.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
+            this.tableLayoutPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(160)))), ((int)(((byte)(180)))));
+            this.tableLayoutPanel1.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Inset;
             this.tableLayoutPanel1.ColumnCount = 4;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 28.57142F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 28.57144F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 42.85714F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 98F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 107F));
             this.tableLayoutPanel1.Controls.Add(this.pbPersonRoom, 3, 0);
             this.tableLayoutPanel1.Controls.Add(this.lbTariffs, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.label1, 1, 0);
@@ -60,13 +60,13 @@
             // 
             // pbPersonRoom
             // 
-            this.pbPersonRoom.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
+            this.pbPersonRoom.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(160)))), ((int)(((byte)(180)))));
             this.pbPersonRoom.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pbPersonRoom.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pbPersonRoom.Image = ((System.Drawing.Image)(resources.GetObject("pbPersonRoom.Image")));
-            this.pbPersonRoom.Location = new System.Drawing.Point(1005, 4);
+            this.pbPersonRoom.Location = new System.Drawing.Point(995, 5);
             this.pbPersonRoom.Name = "pbPersonRoom";
-            this.pbPersonRoom.Size = new System.Drawing.Size(94, 68);
+            this.pbPersonRoom.Size = new System.Drawing.Size(103, 66);
             this.pbPersonRoom.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.pbPersonRoom.TabIndex = 0;
             this.pbPersonRoom.TabStop = false;
@@ -79,9 +79,10 @@
             this.lbTariffs.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lbTariffs.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lbTariffs.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lbTariffs.Location = new System.Drawing.Point(4, 1);
+            this.lbTariffs.ForeColor = System.Drawing.Color.Black;
+            this.lbTariffs.Location = new System.Drawing.Point(5, 2);
             this.lbTariffs.Name = "lbTariffs";
-            this.lbTariffs.Size = new System.Drawing.Size(279, 74);
+            this.lbTariffs.Size = new System.Drawing.Size(275, 72);
             this.lbTariffs.TabIndex = 2;
             this.lbTariffs.Text = "Тарифы";
             this.lbTariffs.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -94,9 +95,10 @@
             this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.Location = new System.Drawing.Point(290, 1);
+            this.label1.ForeColor = System.Drawing.Color.Black;
+            this.label1.Location = new System.Drawing.Point(288, 2);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(279, 74);
+            this.label1.Size = new System.Drawing.Size(275, 72);
             this.label1.TabIndex = 2;
             this.label1.Text = "Помощь";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -121,7 +123,7 @@
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "MainClientForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Интернет провайдер";
+            this.Text = "Интернет-провайдер клиент";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.MainForm_FormClosed);
             this.SizeChanged += new System.EventHandler(this.MainForm_SizeChanged);
             this.tableLayoutPanel1.ResumeLayout(false);

@@ -117,4 +117,7 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="label4.Text" xml:space="preserve">
+    <value>Чтобы подключить тариф, перейдите во вкладку "Тарифы", выберите необходимый и нажмите на кнопку "Подключить". Следует учитывать, что для подключение тарифа требуется иметь на балансе сумму равную стоимости тарифа.</value>
+  </data>
 </root>

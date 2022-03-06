@@ -9,6 +9,7 @@ namespace InternetProviderClient.Forms
     {
         private AuthorizationForm _authorizationForm;
         private Control _currentControl;
+        private Label _selectedButton;
 
         private Font defaultLabelFont;
         private Font selectedLabelFont;
@@ -29,7 +30,7 @@ namespace InternetProviderClient.Forms
 
         private void btnTariffs_Click(object sender, EventArgs e)
         {
-            SetCurrentControl(new TariffsControl());
+            SetCurrentControl(new TariffsControl(), (Label)sender);
 
             if (panel.Controls.Count > 0)
                 panel.Controls.RemoveAt(0);
@@ -38,7 +39,7 @@ namespace InternetProviderClient.Forms
 
         private void btnHelp_Click(object sender, EventArgs e)
         {
-            SetCurrentControl(new HelpControl());
+            SetCurrentControl(new HelpControl(), (Label)sender);
 
             if (panel.Controls.Count > 0)
                 panel.Controls.RemoveAt(0);
@@ -47,7 +48,7 @@ namespace InternetProviderClient.Forms
 
         private void pbPersonRoom_Click(object sender, EventArgs e)
         {
-           SetCurrentControl(new PersonRoomControl());
+           SetCurrentControl(new PersonRoomControl(), null);
 
             if (panel.Controls.Count > 0)
                 panel.Controls.RemoveAt(0);
@@ -60,8 +61,17 @@ namespace InternetProviderClient.Forms
             _currentControl.Size = this.panel.Size;
         }
 
-        private void SetCurrentControl(Control control)
+        private void SetCurrentControl(Control control, Label btn)
         {
+            if(_selectedButton != null)
+            {
+                _selectedButton.Font = defaultLabelFont;
+                _selectedButton.ForeColor = Color.Black;
+            }
+            _selectedButton = btn;
+            if(_selectedButton != null)
+            _selectedButton.ForeColor = Color.AliceBlue;
+
             _currentControl = control;
             _currentControl.Size = this.panel.Size;
         }
@@ -69,6 +79,7 @@ namespace InternetProviderClient.Forms
         private void lbTariffs_MouseEnter(object sender, EventArgs e)
         {
             var lb = (Label)sender;
+            if (lb == _selectedButton) return;
             lb.Font = selectedLabelFont;
             lb.ForeColor = Color.FromArgb(220,220,220); 
         }
@@ -76,7 +87,7 @@ namespace InternetProviderClient.Forms
         private void lbTariffs_MouseLeave(object sender, EventArgs e)
         {
             var lb = (Label)sender;
-
+            if (lb == _selectedButton) return;
             lb.Font = defaultLabelFont;
             lb.ForeColor = Color.Black;
         }

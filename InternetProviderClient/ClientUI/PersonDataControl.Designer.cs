@@ -46,6 +46,7 @@
             this.tbFlat = new System.Windows.Forms.TextBox();
             this.btnEdit = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
+            this.label9 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -245,11 +246,21 @@
             this.btnSave.UseVisualStyleBackColor = false;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label9.Location = new System.Drawing.Point(312, 22);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(223, 27);
+            this.label9.TabIndex = 0;
+            this.label9.Text = "ЛИЧНЫЕ ДАННЫЕ";
+            // 
             // PersonDataControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(255)))), ((int)(((byte)(235)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(220)))), ((int)(((byte)(230)))));
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.btnEdit);
             this.Controls.Add(this.tbFlat);
@@ -267,6 +278,7 @@
             this.Controls.Add(this.tbFirstName);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.tbSecondName);
+            this.Controls.Add(this.label9);
             this.Controls.Add(this.label1);
             this.Name = "PersonDataControl";
             this.Size = new System.Drawing.Size(848, 645);
@@ -295,5 +307,6 @@
         private System.Windows.Forms.TextBox tbFlat;
         private System.Windows.Forms.Button btnEdit;
         private System.Windows.Forms.Button btnSave;
+        private System.Windows.Forms.Label label9;
     }
 }

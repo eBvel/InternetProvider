@@ -32,6 +32,12 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.table = new System.Windows.Forms.DataGridView();
+            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clientLoginDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clientDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tariffNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.startDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.usedTrafficDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.reportMonthBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -42,12 +48,6 @@
             this.btnRemove = new System.Windows.Forms.Button();
             this.tbFind = new System.Windows.Forms.TextBox();
             this.btnFind = new System.Windows.Forms.Button();
-            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clientLoginDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clientDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tariffNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.startDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.usedTrafficDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.table)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.reportMonthBindingSource)).BeginInit();
             this.descriptionPanel.SuspendLayout();
@@ -100,13 +100,57 @@
             this.table.Size = new System.Drawing.Size(938, 696);
             this.table.TabIndex = 19;
             // 
+            // idDataGridViewTextBoxColumn
+            // 
+            this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
+            this.idDataGridViewTextBoxColumn.HeaderText = "Id";
+            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
+            this.idDataGridViewTextBoxColumn.ReadOnly = true;
+            this.idDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // clientLoginDataGridViewTextBoxColumn
+            // 
+            this.clientLoginDataGridViewTextBoxColumn.DataPropertyName = "ClientLogin";
+            this.clientLoginDataGridViewTextBoxColumn.HeaderText = "ClientLogin";
+            this.clientLoginDataGridViewTextBoxColumn.Name = "clientLoginDataGridViewTextBoxColumn";
+            this.clientLoginDataGridViewTextBoxColumn.ReadOnly = true;
+            this.clientLoginDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // clientDataGridViewTextBoxColumn
+            // 
+            this.clientDataGridViewTextBoxColumn.DataPropertyName = "Client";
+            this.clientDataGridViewTextBoxColumn.HeaderText = "ФИО";
+            this.clientDataGridViewTextBoxColumn.Name = "clientDataGridViewTextBoxColumn";
+            this.clientDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // tariffNameDataGridViewTextBoxColumn
+            // 
+            this.tariffNameDataGridViewTextBoxColumn.DataPropertyName = "TariffName";
+            this.tariffNameDataGridViewTextBoxColumn.HeaderText = "Тариф";
+            this.tariffNameDataGridViewTextBoxColumn.Name = "tariffNameDataGridViewTextBoxColumn";
+            this.tariffNameDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // startDateDataGridViewTextBoxColumn
+            // 
+            this.startDateDataGridViewTextBoxColumn.DataPropertyName = "StartDate";
+            this.startDateDataGridViewTextBoxColumn.HeaderText = "Дата начала";
+            this.startDateDataGridViewTextBoxColumn.Name = "startDateDataGridViewTextBoxColumn";
+            this.startDateDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // usedTrafficDataGridViewTextBoxColumn
+            // 
+            this.usedTrafficDataGridViewTextBoxColumn.DataPropertyName = "UsedTraffic";
+            this.usedTrafficDataGridViewTextBoxColumn.HeaderText = "Использовано трафика";
+            this.usedTrafficDataGridViewTextBoxColumn.Name = "usedTrafficDataGridViewTextBoxColumn";
+            this.usedTrafficDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
             // reportMonthBindingSource
             // 
             this.reportMonthBindingSource.DataSource = typeof(Model.Entites.ReportMonth);
             // 
             // label2
             // 
-            this.label2.BackColor = System.Drawing.Color.LightCyan;
+            this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(220)))), ((int)(((byte)(230)))));
             this.label2.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.label2.Location = new System.Drawing.Point(0, 720);
             this.label2.Name = "label2";
@@ -115,7 +159,7 @@
             // 
             // label1
             // 
-            this.label1.BackColor = System.Drawing.Color.LightCyan;
+            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(220)))), ((int)(((byte)(230)))));
             this.label1.Dock = System.Windows.Forms.DockStyle.Top;
             this.label1.Location = new System.Drawing.Point(0, 0);
             this.label1.Name = "label1";
@@ -124,7 +168,7 @@
             // 
             // descriptionPanel
             // 
-            this.descriptionPanel.BackColor = System.Drawing.Color.LightCyan;
+            this.descriptionPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(220)))), ((int)(((byte)(230)))));
             this.descriptionPanel.Controls.Add(this.groupBox1);
             this.descriptionPanel.Controls.Add(this.tbFind);
             this.descriptionPanel.Controls.Add(this.btnFind);
@@ -202,50 +246,6 @@
             this.btnFind.TabIndex = 0;
             this.btnFind.Text = "Найти";
             this.btnFind.UseVisualStyleBackColor = false;
-            // 
-            // idDataGridViewTextBoxColumn
-            // 
-            this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
-            this.idDataGridViewTextBoxColumn.HeaderText = "Id";
-            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
-            this.idDataGridViewTextBoxColumn.ReadOnly = true;
-            this.idDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // clientLoginDataGridViewTextBoxColumn
-            // 
-            this.clientLoginDataGridViewTextBoxColumn.DataPropertyName = "ClientLogin";
-            this.clientLoginDataGridViewTextBoxColumn.HeaderText = "ClientLogin";
-            this.clientLoginDataGridViewTextBoxColumn.Name = "clientLoginDataGridViewTextBoxColumn";
-            this.clientLoginDataGridViewTextBoxColumn.ReadOnly = true;
-            this.clientLoginDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // clientDataGridViewTextBoxColumn
-            // 
-            this.clientDataGridViewTextBoxColumn.DataPropertyName = "Client";
-            this.clientDataGridViewTextBoxColumn.HeaderText = "ФИО";
-            this.clientDataGridViewTextBoxColumn.Name = "clientDataGridViewTextBoxColumn";
-            this.clientDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // tariffNameDataGridViewTextBoxColumn
-            // 
-            this.tariffNameDataGridViewTextBoxColumn.DataPropertyName = "TariffName";
-            this.tariffNameDataGridViewTextBoxColumn.HeaderText = "Тариф";
-            this.tariffNameDataGridViewTextBoxColumn.Name = "tariffNameDataGridViewTextBoxColumn";
-            this.tariffNameDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // startDateDataGridViewTextBoxColumn
-            // 
-            this.startDateDataGridViewTextBoxColumn.DataPropertyName = "StartDate";
-            this.startDateDataGridViewTextBoxColumn.HeaderText = "Дата начала";
-            this.startDateDataGridViewTextBoxColumn.Name = "startDateDataGridViewTextBoxColumn";
-            this.startDateDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // usedTrafficDataGridViewTextBoxColumn
-            // 
-            this.usedTrafficDataGridViewTextBoxColumn.DataPropertyName = "UsedTraffic";
-            this.usedTrafficDataGridViewTextBoxColumn.HeaderText = "Использовано трафика";
-            this.usedTrafficDataGridViewTextBoxColumn.Name = "usedTrafficDataGridViewTextBoxColumn";
-            this.usedTrafficDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // ReportMonthsControl
             // 

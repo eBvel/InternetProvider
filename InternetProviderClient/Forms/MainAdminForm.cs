@@ -9,6 +9,7 @@ namespace InternetProviderClient.Forms
     {
         private AuthorizationForm _authorizationForm;
         private Control _currentControl;
+        private Label _selectedButton;
 
         private Font _defaultLabelFont;
         private Font _selectedLabelFont;
@@ -27,8 +28,15 @@ namespace InternetProviderClient.Forms
 
         private void label1_Click(object sender, EventArgs e)
         {
-            var btn = (Label)sender;
-            _currentControl = GetControlByTag(Convert.ToInt32(btn.Tag));
+            if (_selectedButton != null)
+            {
+                _selectedButton.ForeColor = Color.Black;
+                _selectedButton.Font = _defaultLabelFont;
+            }
+
+            _selectedButton = (Label)sender;
+            _selectedButton.ForeColor = Color.AliceBlue;
+            _currentControl = GetControlByTag(Convert.ToInt32(_selectedButton.Tag));
             SetControlToPanel();
         }
 
@@ -61,6 +69,7 @@ namespace InternetProviderClient.Forms
         private void lbClients_MouseEnter(object sender, EventArgs e)
         {
             var btn = (Label)sender;
+            if (btn == _selectedButton) return;
 
             btn.Font = _selectedLabelFont;
             btn.ForeColor = Color.FromArgb(200,200,200);
@@ -69,6 +78,7 @@ namespace InternetProviderClient.Forms
         private void lbClients_MouseLeave(object sender, EventArgs e)
         {
             var btn = (Label)sender;
+            if (btn == _selectedButton) return;
 
             btn.Font = _defaultLabelFont;
             btn.ForeColor = Color.Black;

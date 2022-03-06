@@ -7,7 +7,7 @@
         public void Pay()
         {
             if (ActiveClient.Instance.AdditionPay()) ;
-                //TODO: hz
+                //TODO:
         }
     }
 }

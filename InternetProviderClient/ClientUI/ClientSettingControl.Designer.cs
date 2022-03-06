@@ -104,7 +104,7 @@
             this.lbBalance.Font = new System.Drawing.Font("Times New Roman", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.lbBalance.Location = new System.Drawing.Point(120, 433);
             this.lbBalance.Name = "lbBalance";
-            this.lbBalance.Size = new System.Drawing.Size(124, 39);
+            this.lbBalance.Size = new System.Drawing.Size(122, 37);
             this.lbBalance.TabIndex = 0;
             this.lbBalance.Text = "Balance";
             // 
@@ -155,9 +155,9 @@
             this.btnDeposit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(200)))), ((int)(((byte)(255)))));
             this.btnDeposit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDeposit.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.btnDeposit.Location = new System.Drawing.Point(128, 537);
+            this.btnDeposit.Location = new System.Drawing.Point(98, 503);
             this.btnDeposit.Name = "btnDeposit";
-            this.btnDeposit.Size = new System.Drawing.Size(229, 34);
+            this.btnDeposit.Size = new System.Drawing.Size(170, 34);
             this.btnDeposit.TabIndex = 1;
             this.btnDeposit.Text = "Пополнить";
             this.btnDeposit.UseVisualStyleBackColor = false;
@@ -168,7 +168,7 @@
             this.lbAmount.AutoSize = true;
             this.lbAmount.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.lbAmount.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(75)))), ((int)(((byte)(75)))));
-            this.lbAmount.Location = new System.Drawing.Point(485, 503);
+            this.lbAmount.Location = new System.Drawing.Point(390, 469);
             this.lbAmount.Name = "lbAmount";
             this.lbAmount.Size = new System.Drawing.Size(209, 27);
             this.lbAmount.TabIndex = 0;
@@ -185,7 +185,7 @@
             0,
             0,
             0});
-            this.tbAmount.Location = new System.Drawing.Point(490, 537);
+            this.tbAmount.Location = new System.Drawing.Point(395, 503);
             this.tbAmount.Maximum = new decimal(new int[] {
             10000,
             0,
@@ -218,7 +218,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(255)))), ((int)(((byte)(235)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(220)))), ((int)(((byte)(230)))));
             this.Controls.Add(this.cbAdditionPay);
             this.Controls.Add(this.tbAmount);
             this.Controls.Add(this.btnDeposit);
