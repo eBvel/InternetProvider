@@ -18,7 +18,7 @@ namespace Service.DataBaseControllers
             return context;
         }
 
-        public async Task<Context> Edit(Tariff entity, Context context)
+        public Context Edit(Tariff entity, Context context)
         {
             context.Entry(entity).State = EntityState.Modified;
             return context;

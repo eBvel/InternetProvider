@@ -9,6 +9,7 @@ namespace Service.ClientService
     public class ClientSession : ISession
     {
         public event Action<IPayment> PaidHandler;
+        public static bool State => ActiveClient.Instance.LastPaymentDate.Value < DateTime.Today && ActiveClient.Instance.LastPaymentDate.Value > DateTime.Today.AddMonths(-1);
 
         private Thread _workImitationThread;
         private double _usedTraffic;
@@ -30,7 +31,8 @@ namespace Service.ClientService
 
         public void Stop()
         {
-            _workImitationThread.Abort();
+            if (_workImitationThread != null)
+                _workImitationThread.Abort();
 
             var rm = new DataBase().GetList(new ReportMonthController()).Where(r => r.Client.Login == ActiveClient.Instance.Login).LastOrDefault();
             rm.TrafficDataUpdate(_usedTraffic);

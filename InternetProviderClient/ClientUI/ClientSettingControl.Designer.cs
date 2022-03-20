@@ -42,6 +42,8 @@
             this.lbAmount = new System.Windows.Forms.Label();
             this.tbAmount = new System.Windows.Forms.NumericUpDown();
             this.cbAdditionPay = new System.Windows.Forms.CheckBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.lbState = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.tbAmount)).BeginInit();
             this.SuspendLayout();
             // 
@@ -214,6 +216,27 @@
             this.cbAdditionPay.UseVisualStyleBackColor = true;
             this.cbAdditionPay.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(75)))), ((int)(((byte)(75)))));
+            this.label5.Location = new System.Drawing.Point(442, 41);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(122, 27);
+            this.label5.TabIndex = 0;
+            this.label5.Text = "Состояние";
+            // 
+            // lbState
+            // 
+            this.lbState.AutoSize = true;
+            this.lbState.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lbState.Location = new System.Drawing.Point(442, 85);
+            this.lbState.Name = "lbState";
+            this.lbState.Size = new System.Drawing.Size(60, 27);
+            this.lbState.TabIndex = 0;
+            this.lbState.Text = "State";
+            // 
             // ClientSettingControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -225,10 +248,12 @@
             this.Controls.Add(this.lbBalance);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.lbPrice);
+            this.Controls.Add(this.lbState);
             this.Controls.Add(this.lbSpeed);
             this.Controls.Add(this.lbTraffic);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.lbAmount);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.lbTariffName);
@@ -257,5 +282,7 @@
         private System.Windows.Forms.Label lbAmount;
         private System.Windows.Forms.NumericUpDown tbAmount;
         private System.Windows.Forms.CheckBox cbAdditionPay;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label lbState;
     }
 }

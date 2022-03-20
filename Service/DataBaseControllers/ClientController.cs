@@ -20,7 +20,7 @@ namespace Service.DataBaseControllers
             return context;
         }
 
-        public async Task<Context> Edit(Client entity, Context context)
+        public Context Edit(Client entity, Context context)
         {
             context.Entry(entity).State = EntityState.Modified;
             return context;

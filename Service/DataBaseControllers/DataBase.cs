@@ -22,7 +22,7 @@ namespace Service.DataBaseControllers
         {
             using (var context = new Context())
             {
-                await (await operation.Edit(entity, context)).SaveChangesAsync();
+                await operation.Edit(entity, context).SaveChangesAsync();
             }
         }
 

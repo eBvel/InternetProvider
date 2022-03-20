@@ -17,7 +17,7 @@ namespace Service.DataBaseControllers
             return context;
         }
 
-        public async Task<Context> Edit(ReportMonth entity, Context context)
+        public Context Edit(ReportMonth entity, Context context)
         {
             context.Entry(entity).State = EntityState.Modified;
             return context;

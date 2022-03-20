@@ -58,15 +58,15 @@ namespace InternetProviderClient
 
             if (new ClientController().IsClient(user))
             {
-                new MainClientForm(this).Show();
                 var clientSession = new ClientSession(user);
                 clientSession.PaidHandler += Pay;
                 _session = new Session(clientSession);
+                new MainClientForm(this).Show();
             }
             else
             {
-                new MainAdminForm(this).Show();
                 _session = new Session(new AdminSession());
+                new MainAdminForm(this).Show();
             }
 
             _session.Start();

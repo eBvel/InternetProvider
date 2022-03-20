@@ -33,6 +33,7 @@ namespace InternetProviderClient.ClientUI
             lbPrice.Text = tariff.Price;
             lbBalance.Text = $"{ActiveClient.Instance.Balance.ToString()} рублей";
             cbAdditionPay.Checked = ActiveClient.Instance.AutoAdditionTraffic;
+            lbState.Text = ClientSession.State ? "Подключен":"Отключен";
         }
 
         private void radioButton1_CheckedChanged(object sender, EventArgs e)
